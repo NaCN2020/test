@@ -8,3 +8,10 @@ script: true
   #- npm run build
   #- npm run test
   #- npm run lint
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: master
+
